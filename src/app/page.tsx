@@ -1,7 +1,10 @@
+import AddTodo from "@/components/AddTodo"
 
 function HomePage() {
   return (
-    <div>Home</div>
+    <div>
+      <AddTodo/>
+    </div>
   )
 }
 export default HomePage

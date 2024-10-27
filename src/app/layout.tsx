@@ -1,14 +1,9 @@
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import { Metadata } from '@/types/types';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
 
-const roboto_mono = Roboto_Mono({
+const roboto = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-roboto-mono',
@@ -30,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.variable} ${roboto_mono.variable} antialiased`}
+        className={`${roboto.variable} bg-slate-800 text-gray-200`}
       >
         {children}
       </body>
