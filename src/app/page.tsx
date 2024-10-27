@@ -6,7 +6,6 @@ import AddTodo from '@/components/AddTodo';
 import { PrismaClient } from '@prisma/client';
 import Todo from '@/components/Todo';
 
-
 const prisma = new PrismaClient();
 async function getData() {
   const data = await prisma.todo.findMany({
@@ -23,6 +22,8 @@ async function getData() {
   return data;
 }
 
+
+
 async function HomePage() {
   const data = await getData();
   return (
@@ -36,7 +37,7 @@ async function HomePage() {
         <AddTodo />
       </div>
       {/* display data */}
-      <div className='w-2/3 lg:w-1/3 flex flex-col gap-5 items-center justify-center mt-10'>
+      <div className='w-[90%] lg:w-1/2 flex flex-col gap-5 items-center justify-center mt-10'>
         {data.map((todo, idx) => (
           <div className='w-full' key={idx}>
             <Todo idx={idx} todo={todo} />

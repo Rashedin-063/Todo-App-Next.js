@@ -1,6 +1,5 @@
 "use client"
 import { ButtonProps } from '@/types/buttonProps'
-import { FiMenu } from 'react-icons/fi'
 
 const Button = ({type, text, onClick, actionButton}: ButtonProps) => {
   return (

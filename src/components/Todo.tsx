@@ -12,15 +12,14 @@ const Todo = ({ todo }: { todo: TodoType, idx: number }) => {
 
   return (
     <div
-      className="  flex items-center justify-between bg-white py-3 px-20 rounded-2xl text-black"
+      className='  flex items-center justify-between bg-white py-3 px-8 rounded-2xl text-black'
       style={todoStyle}
     >
-   
-      <ChangeTodo todo={todo} />
-      <span className="text-center font-bold uppercase">
-        {todo.title}
-      </span>
-      <div className="flex items-center gap-5">
+      <div className="flex gap-2 items-center">
+        <ChangeTodo todo={todo} />
+        <span className='text-center font-bold uppercase'>{todo.title}</span>
+      </div>
+      <div className='flex items-center gap-5'>
         <EditTodo todo={todo} />
         <DeleteTodo todo={todo} />
       </div>
