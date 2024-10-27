@@ -1,6 +1,5 @@
 import { Inter, Roboto_Mono } from 'next/font/google';
 import { Metadata } from '@/types/types';
-import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = Inter({
