@@ -1,3 +1,4 @@
+import { create } from "@/app/actions/todoActions";
 import Button from "./Button";
 import Form from "./Form";
 import Input from "./Input";
@@ -5,7 +6,7 @@ import Input from "./Input";
 
 const AddTodo = () => {
   return (
-    <Form className="mt-8">
+    <Form action={create} className="mt-8">
       <div className="flex">
        <Input
           name="input"

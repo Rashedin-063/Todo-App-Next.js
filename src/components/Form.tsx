@@ -15,7 +15,8 @@ const Form = ({ children, action, className, onSubmit }: FormProps) => {
   };
 
   return (
-    <form className={className} onSubmit={handleSubmit} ref={ref}>
+    <form className={className} onSubmit={handleSubmit} ref={ref}
+    >
       {children}
     </form>
   );

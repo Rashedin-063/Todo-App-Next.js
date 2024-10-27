@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,10 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Todo {
-  id String @id @default(uuid()) @map("_id")
-  title String?
-  isCompleted Boolean @default(false)
-  createdAt DateTime @default(now())
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String?
+  isCompleted Boolean  @default(false)
+  createdAt   DateTime @default(now())
 }
