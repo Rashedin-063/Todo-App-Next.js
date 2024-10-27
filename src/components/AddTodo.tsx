@@ -1,12 +1,20 @@
-import { Headland_One } from 'next/font/google';
+import Button from "./Button";
+import Form from "./Form";
+import Input from "./Input";
 
-const headland = Headland_One({ weight: ['400'], subsets: ['latin'] });
 
 const AddTodo = () => {
   return (
-    <div className='py-20 flex justify-center flex-col items-center min-h-screen'>
-      <h1 className={`text-4xl uppercase ${headland.className}`}>Todo App</h1>
-    </div>
+    <Form className="mt-8">
+      <div className="flex">
+       <Input
+          name="input"
+          type="text"
+          placeholder="Add Todo..."
+        />
+        <Button type="submit" text="Add" />
+      </div>
+   </Form>
   );
 };
 export default AddTodo;
