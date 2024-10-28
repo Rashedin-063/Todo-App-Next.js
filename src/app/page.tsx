@@ -8,6 +8,7 @@ import Todo from '@/components/Todo';
 import { getServerSession } from 'next-auth';
 import { authOptions } from './api/auth/[...nextauth]/route';
 import Link from 'next/link';
+import LogoutBtn from '@/components/LogoutBtn';
 
 const prisma = new PrismaClient();
 async function getData() {
@@ -39,9 +40,9 @@ async function HomePage() {
   if (session) {
    return (
      <div className='py-20 flex justify-center flex-col items-center relative'>
-       <button className='bg-orange-600 px-6 py-1 rounded-full pb-2 absolute top-4 right-4 lg:top-10 lg:right-10'>
-         Logout
-       </button>
+      
+       <LogoutBtn/>
+       
        <h1
          className={`text-4xl uppercase ${headland.className} text-yellow-500`}
        >
